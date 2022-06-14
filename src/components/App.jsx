@@ -1,5 +1,5 @@
 import VideoList from './VideoList.js';
-console.log(VideoList);
+
 var App = () => (
   <div>
     <nav className="navbar">
@@ -18,7 +18,6 @@ var App = () => (
     </div>
   </div>
 );
-console.log(VideoList);
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 export default App;

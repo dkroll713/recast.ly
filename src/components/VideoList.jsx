@@ -1,10 +1,22 @@
-var VideoList = () => (
+import exampleVideoData from '../data/exampleVideoData.js';
+import VideoListEntry from './VideoListEntry.js';
+
+console.log(exampleVideoData);
+
+var VideoList = (videos) => (
+
   <div className="video-list">
+
+    {exampleVideoData.map(function (video) {
+      console.log(video);
+      return <VideoListEntry key={video.id.videoId} text={video.snippet.title}/>;
+    })}
+
+    {/* <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div> */}
   </div>
 );
 
