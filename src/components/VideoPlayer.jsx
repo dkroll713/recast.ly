@@ -1,11 +1,12 @@
-var VideoPlayer = () => (
+var VideoPlayer = (video) => (
+  console.log(video),
   <div className="video-player">
     <div className="embed-responsive embed-responsive-16by9">
-      <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allowFullScreen></iframe>
+      <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/{video.props.id.videoId}" allowFullScreen></iframe>
     </div>
     <div className="video-player-details">
-      <h3>Video Title</h3>
-      <div>Video Description</div>
+      <h3>{video.props.snippet.title}</h3>
+      <div>{video.props.snippet.title}</div>
     </div>
   </div>
 );

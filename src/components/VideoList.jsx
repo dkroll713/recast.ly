@@ -1,15 +1,13 @@
 import exampleVideoData from '../data/exampleVideoData.js';
 import VideoListEntry from './VideoListEntry.js';
 
-console.log(exampleVideoData);
-
+// console.log(exampleVideoData);
 var VideoList = (videos) => (
-
+  console.log('videos props:', videos),
   <div className="video-list">
-
-    {exampleVideoData.map(function (video) {
-      console.log(video);
-      return <VideoListEntry key={video.id.videoId} text={video.snippet.title}/>;
+    {videos.props.map(function (video) {
+      // console.log(video);
+      return <VideoListEntry key={video.id.videoId} video={video}/>;
     })}
 
     {/* <div><h5><em>videoListEntry</em> view goes here</h5></div>
